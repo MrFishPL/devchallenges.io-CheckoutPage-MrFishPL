@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="icon" href="img/devchallenges.png" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/input.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Devchallenges</title>
+
+</head>
+
+<body>
+  <h1>Checkout</h1>
+  <div class="wrapper">
+    <form action="index.html" name="main-form" validate>
+      <section class="contact">
+        <h2>Contact information</h2>
+
+        <label for="mail">E - mail</label>
+        <div class="input-content">
+          <span class="material-icons">email</span>
+          <input type="text" placeholder="Enter your email..." name="mail" id="mail" required>
+        </div>
+
+        <label for="phone">Phone</label>
+        <div class="input-content">
+          <span class="material-icons">phone</span>
+          <input type="tel" placeholder="Enter your phone..." name="phone" id="phone" required>
+        </div>
+      </section>
+
+      <section class="adress">
+        <h2>Shipping adress</h2>
+
+        <label for="name">Full name</label>
+        <div class="input-content">
+          <span class="material-icons">account_circle</span>
+          <input type="text" placeholder="Your full name..." name="name" id="name" required>
+        </div>
+
+        <label for="adress">Adress</label>
+        <div class="input-content">
+          <span class="material-icons">home</span>
+          <input type="text" placeholder="Your adress..." name="adress" id="adress" required>
+        </div>
+
+        <label for="city">City</label>
+        <div class="input-content">
+          <span class="material-icons">apartment</span>
+          <input type="text" placeholder="Your city..." name="city" id="city" required>
+        </div>
+
+        <div class="place">
+          <div>
+            <label for="country">Country</label>
+            <div class="input-content select">
+              <span class="material-icons">public</span>
+              <select name="country" id="country">
+                <option value="volvo">Poland</option>
+                <option value="saab">The USA</option>
+                <option value="audi">Thailand</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="pcode">City</label>
+            <div class="input-content">
+              <span class="material-icons">work</span>
+              <input type="text" placeholder="Your postal code..." name="pcode" id="pcode" required>
+            </div>
+          </div>
+        </div>
+
+        <label class="checkbox-label"><input name="remember" type="checkbox"> Save this information for next time</label>
+
+        <input type="submit" value="Continue">
+      </section>
+    </form>
+
+    <div class="articles">
+      <div class="item">
+        <img src="img/photo1.png" alt="">
+
+        <div class="item-right">
+          <div class="item-text">
+            <h3>Vintage Backbag</h3>
+            <span>$54.99</span>
+            <span>$94.99</span>
+          </div>
+
+          <div class="num-input">
+            <span class="material-icons" onclick="changeAmount(-1)">remove</span>
+
+            <span class="value">1</span>
+            <span class="material-icons" onclick="changeAmount(1)">add</span>
+            <input name="amount1" type="hidden" form="main-form" value="1" data-min=1 data-max=15>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/photo2.png" alt="">
+
+        <div class="item-right">
+          <div class="item-text">
+            <h3>Levi Shoes</h3>
+            <span>$74.99</span>
+            <span>$124.99</span>
+          </div>
+
+          <div class="num-input">
+            <span class="material-icons" onclick="changeAmount(-1)">remove</span>
+
+            <span class="value">1</span>
+            <span class="material-icons" onclick="changeAmount(1)">add</span>
+            <input type="hidden" name="amount2" value="1" form="main-form" data-min=1 data-max=15>
+          </div>
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <td>Shipping</td>
+          <td>$19</td>
+        </tr>
+
+        <tr>
+          <td>Total</td>
+          <td>$148.98</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <footer>created by <a href="">MrFishPL</a> - devChallenges.io</footer>
+
+  <script>
+    // Small imputs operations
+
+    const changeAmount = (amount) => {
+      const parent = event.srcElement.parentElement;
+      const counter = parent.children[1];
+      const value = parseInt(counter.innerText);
+
+      const minimum = parent.children[3].dataset.min;
+      const maximum = parent.children[3].dataset.max;
+
+      if (value + amount <= maximum && value + amount >= minimum) {
+        counter.innerText = value + amount;
+        parent.children[3].value = value + amount;
+      }
+    };
+
+    const focusChildInput = (event) => {
+      const input = event.srcElement.children[1];
+      if (input) input.focus();
+    }
+
+    document.querySelectorAll(".input-content").forEach(
+      node => node.addEventListener("click", focusChildInput)
+    );
+
+    const changeArrow = () => {
+      const select = event.srcElement;
+      const parent = select.parentElement;
+
+      parent.classList.toggle("hovered");
+    };
+
+    document.querySelector(".input-content select").addEventListener("mouseover", changeArrow);
+    document.querySelector(".input-content select").addEventListener("mouseout", changeArrow);
+
+  </script>
+</body>
+
+</html>
+
+<!-- TODO: dodaj walidację formularza -->

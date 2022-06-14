@@ -1,0 +1,246 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 2vw 16vw;
+}
+
+.articles {
+    width: 450px;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 30px;
+    height: min-content;
+}
+
+.item {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.item:first-child {
+    margin-top: 0;
+}
+
+.item img {
+    width: 40%;
+    border-radius: 16px;
+}
+
+.item > div {
+    width: 60%;
+}
+
+.item-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item div h3 {
+    color: #4E5150;
+    font-size: 1.25em;
+    margin-bottom: 7px;
+}
+
+.item-text span:nth-child(2) {
+    color: #F2994A;
+    font-size: 1.25em;
+}
+
+.item-text span:nth-child(3) {
+    font-size: 1em;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.articles table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #333;
+    margin-top: 90px;
+}
+
+.articles table td{
+    border-top: 1px solid #BDBDBD;
+    margin: 0;
+}
+
+.articles table tr:first-child td {
+    padding: 10px 0;
+}
+
+.articles table tr:last-child td {
+    padding: 10px 0 0 0;
+}
+
+.articles table td:nth-child(2) {
+    text-align: right;
+}
+
+.articles table td:first-child {
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: .75em;
+}
+
+form section h2 {
+    font-size: 1.125em;
+}
+.adress {
+    margin-top: 55px;
+}
+
+.place {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.place div {
+    width: 50%;
+}
+
+.place > div div {
+    width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 8vw;
+}
+
+.wrapper form {
+    /* background-color: red; */
+}
+
+h1 {
+    font-size: 2.25em;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+footer {
+  font-size: .86em;
+  color: #BDBDBD;
+  text-align: center;
+  padding-top: 150px;
+  font-weight: 600;
+}
+
+footer a {
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1600px) {
+  .articles { width: 400px; }
+  .wrapper { grid-template-columns: 1fr 400px; }
+  .articles { font-size: 90%; }
+  form ::placeholder { font-size: 90%; }
+}
+
+@media screen and (max-width: 1450px) {
+  .wrapper { grid-template-columns: 1fr 350px; }
+  .articles { width: 350px; }
+  .articles { font-size: 70%; }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+  }
+
+  .articles {
+    grid-row: 1;
+  }
+
+  .articles { font-size: 100%; width: 100%}
+  form ::placeholder { font-size: 100%; }
+
+  .item {
+    width: min(100%, 400px)
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .articles { font-size: 80%; }
+  form ::placeholder { font-size: 90%; }
+  footer {
+    padding-top: 100px;
+  }
+
+  .select::after {
+    width: 25px;
+    height: 25px;
+  }
+
+  .num-input {
+    justify-content: space-between;
+    padding: 7px;
+    gap: 3px;
+  }
+
+  form {
+    font-size: 80%;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  footer { font-size: 80%; }
+}
+
+@media screen and (max-width: 500px) {
+  .articles { font-size: 70%; }
+}
+
+@media screen and (max-width: 460px) {
+  form ::placeholder { font-size: 80%; }
+  .num-input {padding: 5px}
+  .num-input span { font-size: 2em; }
+  .articles { padding: 10px; }
+  body { padding: 2vw 8vw; }
+  .place { flex-direction: column; gap: 0; }
+  .place > div { width: 100%; }
+  .input-content { padding: 5px; }
+  .select::after { transform: translateX(-4px); }
+}
+
+@media screen and (max-width: 350px ) {
+  .articles { font-size: 60%; margin-bottom: 40px; }
+}
+
+@media screen and (max-width: 270px) {
+  .item {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+
+  .item img {
+    width: 100% !important;
+  }
+
+  .item-right {
+    gap: 10px;
+  }
+}

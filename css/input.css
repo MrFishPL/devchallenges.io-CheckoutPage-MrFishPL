@@ -1,0 +1,124 @@
+/* Text inputs */
+
+.input-content {
+    padding: 5px;
+    border: 1px solid #828282;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 14px;
+    cursor: text;
+}
+
+.wrong {
+  border-color: #eb5b5b;
+}
+
+.input-content *:not(span) {
+    width: 100%;
+    outline: none;
+}
+
+.input-content span {
+    color: #828282;
+}
+
+.input-content *:not(span)::placeholder {
+    color: #828282 !important;
+}
+
+.num-input {
+    border: 1px #828282 solid;
+    padding: 15px 13px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 12px;
+}
+
+.num-input span:nth-child(1), .num-input span:nth-child(3) {
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    color: #828282;
+    cursor: pointer;
+    user-select: none;
+}
+
+.num-input span:nth-child(2) {
+    font-size: 1.25em;
+    width: 25px;
+    text-align: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .75em;
+    margin-bottom: 22px;
+}
+
+.checkbox-label input {
+    width: 20px;
+    height: 20px;
+}
+
+input[type=submit] {
+    background-color: #F2994A;
+    font-weight: 600;
+    padding: 17px 45px;
+    color: #fff;
+    border-radius: 12px;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    transition: background-color .2s;
+}
+
+input[type=submit]:hover {
+  background-color: #db8a42;
+}
+
+.select {
+  position: relative;
+  cursor: default;
+}
+
+label {
+  cursor: default !important;
+}
+
+select {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.select::after {
+  font-family: "Material Icons";
+  content: "\e5c5";
+  color: #828282;
+  background-color: #E0E0E0;
+  display: block;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  right: 0;
+  transform: translateX(-10px);
+  font-size: 1.4em;
+  z-index: 1;
+
+  transition: background-color .2s;
+}
+
+.hovered::after {
+  background-color: #cccaca;
+}
