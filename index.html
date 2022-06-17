@@ -107,7 +107,7 @@
 
             <span class="value">1</span>
             <span class="material-icons" onclick="changeAmount(1)">add</span>
-            <input name="amount1" type="hidden" form="main-form" value="1" data-min=1 data-max=15>
+            <input name="amount1" type="hidden" form="main-form" value="1" data-min=1 data-max=15 data-price=54.99>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@
 
             <span class="value">1</span>
             <span class="material-icons" onclick="changeAmount(1)">add</span>
-            <input type="hidden" name="amount2" value="1" form="main-form" data-min=1 data-max=15>
+            <input type="hidden" name="amount2" value="1" form="main-form" data-min=1 data-max=15 data-price=74.99>
           </div>
         </div>
       </div>
@@ -151,6 +151,27 @@
   <script>
     // Small imputs operations
 
+    var sum = 0;
+    const SHIPPING = 19;
+
+    const updateDisplayPrice = (price) => {
+      document.querySelector(".articles table tr:nth-child(2) td:last-child").innerText = "$" + parseFloat((price + SHIPPING).toFixed(2));
+    };
+
+    // Updates price variable. Calls on load and on amount change
+    const updatePrice = () => {
+      const amounts = document.querySelectorAll(".num-input input[type=hidden]");
+      let tmpSum = 0;
+
+      amounts.forEach(
+        input => tmpSum += input.value * input.dataset.price
+      );
+
+      sum = tmpSum;
+      updateDisplayPrice(sum);
+    };
+
+    // Changes amount of articles
     const changeAmount = (amount) => {
       const parent = event.srcElement.parentElement;
       const counter = parent.children[1];
@@ -163,12 +184,17 @@
         counter.innerText = value + amount;
         parent.children[3].value = value + amount;
       }
+
+      updatePrice();
     };
 
+    document.onload = updatePrice;
+
+    // It is just a datail
     const focusChildInput = (event) => {
       const input = event.srcElement.children[1];
       if (input) input.focus();
-    }
+    };
 
     document.querySelectorAll(".input-content").forEach(
       node => node.addEventListener("click", focusChildInput)
