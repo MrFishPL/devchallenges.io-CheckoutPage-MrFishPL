@@ -87,7 +87,7 @@
 
         <label class="checkbox-label"><input name="remember" type="checkbox"> Save this information for next time</label>
 
-        <input type="submit" value="Continue">
+        <input type="button" value="Continue">
       </section>
     </form>
 
@@ -211,6 +211,39 @@
     document.querySelector(".input-content select").addEventListener("mouseout", changeArrow);
 
   </script>
+  <script>
+    const validateEmail = email => {
+      return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/.test(email);
+    };
+
+    // It allows a limited amount of formats but I gave up doing this flexible...
+    const validatePhoneNumber = phoneNum => {
+      return /^[0-9\-\+]{9,15}$/.test(phoneNum);
+    };
+
+    document.querySelector("input[type=button]").onclick = () => {
+      const inputs = document.querySelectorAll(".input-content input");
+
+      let wrong = new Set();
+
+      inputs.forEach(input => {
+        if (!input.value) wrong.add(input);
+      });
+
+      if (!validateEmail(inputs[0].value)) wrong.add(inputs[0]);
+      if (!validatePhoneNumber(inputs[1].value)) wrong.add(inputs[1]);
+
+      let invalidInfo = "";
+      wrong.forEach(inv => invalidInfo += "\n" + inv.placeholder);
+
+      if (wrong.size) window.alert("These inputs are invalid.\n" + invalidInfo + "\n\nPlease input correct values.");
+      else {
+        window.alert("Thank you for completing the form.");
+        document.querySelector("form").submit();
+      }
+    };
+  </script>
+
 </body>
 
 </html>
