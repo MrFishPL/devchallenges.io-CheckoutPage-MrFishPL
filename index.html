@@ -26,8 +26,8 @@
   <h1>Checkout</h1>
   <div class="wrapper">
     <form action="index.html" name="main-form" validate>
-      <section class="contact">
-        <h2>Contact information</h2>
+      <fieldset class="contact">
+        <legend>Contact information</legend>
 
         <label for="mail">E - mail</label>
         <div class="input-content">
@@ -40,10 +40,10 @@
           <span class="material-icons">phone</span>
           <input type="tel" placeholder="Enter your phone..." name="phone" id="phone" required>
         </div>
-      </section>
+      </fieldset>
 
-      <section class="adress">
-        <h2>Shipping adress</h2>
+      <fieldset class="adress">
+        <legend>Shipping adress</legend>
 
         <label for="name">Full name</label>
         <div class="input-content">
@@ -88,7 +88,7 @@
         <label class="checkbox-label"><input name="remember" type="checkbox"> Save this information for next time</label>
 
         <input type="button" value="Continue">
-      </section>
+      </fieldset>
     </form>
 
     <div class="articles">
@@ -247,5 +247,3 @@
 </body>
 
 </html>
-
-<!-- TODO: dodaj walidację formularza -->
