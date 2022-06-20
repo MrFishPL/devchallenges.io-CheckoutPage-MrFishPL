@@ -66,7 +66,7 @@ This application/site was created as a submission to a [DevChallenges](https://d
 - [x] User story: I can input email, phone, full name, address, city, country, and postal code
 - [x] User story: I can input the number of items
 - [x] User story: I can select at least 3 countries from the dropdown
-- [x] vUser story: When I click submit button or press enter, I can see a warning if validation fails
+- [x] User story: When I click submit button or press enter, I can see a warning if validation fails
 - [x] User story: When I click submit button or press enter, I can see a successful alert if validation succeeds
 
 ## Contact
