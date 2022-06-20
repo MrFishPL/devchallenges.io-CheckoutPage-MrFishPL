@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Checkout page - Responsive Web Developer challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://mrfishpl.github.io/devchallenges.io-CheckoutPage-MrFishPL/">
       Demo
     </a>
     <span> | </span>
@@ -30,28 +30,31 @@
   - [Built With](#built-with)
 - [Features](#features)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://raw.githubusercontent.com/MrFishPL/devchallenges.io-CheckoutPage-MrFishPL/master/img/screencapture-file-home-mrfishpl-Pulpit-checkout-page-master-index-html-2022-06-20-16_38_24.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+- Where can I see your demo?<br>
+  [here](https://mrfishpl.github.io/devchallenges.io-CheckoutPage-MrFishPL/)
+- What was your experience?<br>
+  To be honest I don't like this challenge very much. I spent a lot of hours doing this and there was a lot of small things to do. The responsiveness of the website gave me some pain but finally I did it.
+- What have you learned/improved?<br>
+  I've improved my form skills ofc. I've learnt a lot of styling selects and numbert inputs. The website has a javascript layer to, so I improved my js skills.
+- Your wisdom? :)<br>
+Making and styling forms should be considered torture ;_;
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [HTML5](https://html5.org/)
+- [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
+- [Vanilla JS](https://developer.mozilla.org/pl/docs/Web/JavaScript)
 
 ## Features
 
@@ -59,32 +62,8 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) was to build an application to complete the given user stories.
 
-
-## How To Use
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
-```
-
-## Acknowledgements
-
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
-
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Facebook: [Michał Karp](https://www.facebook.com/karpik.junior)
+- Github: [MrFishPL](https://github.com/MrFishPL)
+- Discord: MrFishPL#3965
